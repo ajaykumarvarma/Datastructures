@@ -42,7 +42,7 @@ void display()
     int i;
     if(tos<=0)
     {
-        printf("Stack overflow");
+        printf("Stack empty");
     }
     for(i=1;i<=tos;i++)
     {
