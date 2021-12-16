@@ -108,3 +108,66 @@ int main()
 
 -----------------------------------------------------------------------------------------------------------------------
   
+prob2
+
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void push(int );
+void pop();
+int tos = 0;
+char arr[10] ;
+int arr[10];
+int max_size=10;
+void push(int x)
+
+{
+    if (tos>=max_size)
+    {
+        printf("Stack Overflow");
+    }
+    else
+    {
+        tos++;
+        arr[tos] = x;
+    }
+}
+void pop()
+{
+    int x;
+     if(tos<=0)
+     {
+        printf("Stack empty");
+     }
+    else
+    {
+        x = arr[tos];
+        tos--;
+       
+    }
+}
+
+
+int main()
+{
+    char word[10];
+    int ans;
+    printf("Enter a word:")
+    scanf("%s", word);
+    int length = strlen(word);
+    for(int i=0;i<length;i++)
+    {
+        if(a[i]=="+" || a[i]=="-" || a[i] == "*" || a[i]=="/")
+        {
+            p1=pop();
+            p2=pop();
+        }
+    }
+    
+    
+    
+
+
+    return 0;
+}
