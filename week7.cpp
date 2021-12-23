@@ -1,53 +1,55 @@
+// In a class room we have discussed the stack operations called push() and pop(). Based on these operations design and implement the solution to identify the balanced and un-balanced expressions.
+
 #include <iostream>
 #include<stack>
 using namespace std;
-bool isbalanced(string exp)
+bool
+isbalanced (string exp)
 {
-    if (exp.length() & 1)
+  stack < char >stack;
+for (char ch:exp)
     {
-        return false;
-    }  
-    stack<char> stack;
-    for (char ch: exp)
-    {
-        if(ch=='(' || ch=='{' || ch=='[')
-        {
-            stack.push(ch);
-        }
-        
-        if(ch==')' || ch=='}' || ch==']') 
-        {
-            if(stack.empty())
-            {
-                return false;
-            }
-            
-            char top = stack.top();
-            stack.pop();
-            if((top=='(' && ch!=')') || (top=='{' && ch!='}') || (top=='[' && ch!=']'))
-            {
-                
-                return false;
-            }
-            
-            
-        }
+      if (ch == '(' || ch == '{' || ch == '[')
+	{
+	  stack.push (ch);
+	}
+
+      if (ch == ')' || ch == '}' || ch == ']')
+	{
+	  if (stack.empty ())
+	    {
+	      return false;
+	    }
+
+	  char top = stack.top ();
+	  stack.pop ();
+	  if ((top == '(' && ch != ')') || (top == '{' && ch != '}')
+	      || (top == '[' && ch != ']'))
+	    {
+
+	      return false;
+	    }
+
+
+	}
     }
-    return stack.empty();
-    
+  return stack.empty ();
+
 }
-int main()
+
+int
+main ()
 {
-    string exp;
-    cout<<"Enter a expression:";
-    cin>>exp;
-    if(isbalanced(exp))
+  string exp;
+  cout << "Enter a expression:";
+  cin >> exp;
+  if (isbalanced (exp))
     {
-        cout<<"Expression Balanced"<<endl;
+      cout << "Expression Balanced" << endl;
     }
-    else
+  else
     {
-        cout<<"Expression Not Balanced"<<endl;
+      cout << "Expression Not Balanced" << endl;
     }
-    return 0;
+  return 0;
 }
