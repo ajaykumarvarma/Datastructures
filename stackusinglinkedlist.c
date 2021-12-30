@@ -1,6 +1,5 @@
 //STACK USING LINKEDLIST
 
-//stack using linkedlist
 #include <stdio.h>
 #include<stdlib.h>
 struct node
