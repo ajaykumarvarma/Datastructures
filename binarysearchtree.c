@@ -10,10 +10,10 @@ void delete1();
 void insert();
 void delete();
 void inorder(struct btnode *t);
-void create();
-void search(struct btnode *t);
 void preorder(struct btnode *t);
 void postorder(struct btnode *t);
+void create();
+void search(struct btnode *t);
 void search1(struct btnode *t,int data);
 int smallest(struct btnode *t);
 int largest(struct btnode *t);
@@ -222,7 +222,7 @@ int largest(struct btnode *t)
     else    
         return(t->value);
 }
-void main()
+int main()
 {
     int ch;
     printf("\nMENU");
@@ -260,5 +260,6 @@ void main()
             break;    
         }
     }
+    return 0;
 }
 
